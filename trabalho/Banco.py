@@ -29,7 +29,20 @@ class Banco:
         self.db = self.conectar()
         self.cursor = self.db.cursor()
         self.cursor.execute(sql, *args)
+        self.db.commit()
         self.fechar(self.db)
+
+    def ler_produtos(self):
+        sql = "SELECT * FROM produto;"
+        self.db = self.conectar()
+        self.cursor = self.db.cursor()
+        self.produtos = self.cursor.execute(sql)
+        self.lista_produtos = []
+
+        for item in self.produtos.fetchall():
+            self.lista_produtos.append(item)
+
+        return self.lista_produtos
 
     def __init__(self):
         self.tabela()

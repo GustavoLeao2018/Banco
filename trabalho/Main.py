@@ -20,8 +20,13 @@ def produto():
 
     return(produto, tipo, preco, quantidade)
 
+def ler(db):
+    lista = db.ler_produtos()
+    print(lista)
+
 if __name__ == '__main__':
     db = Banco()
     for i in range(0, 15):
         p = produto()
         db.inserir_produto(p)
+    ler(db)
