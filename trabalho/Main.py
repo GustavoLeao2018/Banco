@@ -22,7 +22,20 @@ def produto():
 
 def ler(db):
     lista = db.ler_produtos()
-    print(lista)
+    print("="*100)
+    for item in lista:
+        print(item)
+    print("="*100)
+
+def alterar(db):
+    quantidade = db.ler_quantidade()
+    db.editar_produto((randint(0, quantidade), randint(0, 100)))
+    ler(db)
+
+def deletar(db):
+    quantidade = db.ler_quantidade()
+    db.apagar_produto((randint(0, quantidade),))
+    ler(db)
 
 if __name__ == '__main__':
     db = Banco()
@@ -30,3 +43,5 @@ if __name__ == '__main__':
         p = produto()
         db.inserir_produto(p)
     ler(db)
+    deletar(db)
+    alterar(db)

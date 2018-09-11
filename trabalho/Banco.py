@@ -9,6 +9,36 @@ class Banco:
     def fechar(self, db):
         db.close()
 
+    def executar(self, sql, opcao, *args):
+        db = self.conectar()
+        cursor = db.cursor()
+        if opcao == None:
+            cursor.execute(sql)
+        elif opcao == 'insert':
+            cursor.execute(sql, *args)
+            db.commit()
+        elif opcao == 'select':
+            itens = cursor.execute(sql)
+            lista = []
+            for item in itens.fetchall():
+                lista.append(item)
+            self.fechar(db)
+            return lista
+        elif opcao == 'select-quantidade':
+            itens = cursor.execute(sql)
+            lista = []
+            for item in itens.fetchall():
+                lista.append(item)
+            self.fechar(db)
+            return len(lista)
+        elif opcao == 'delete':
+            cursor.execute(sql, *args)
+            db.commit()
+        elif opcao == 'update':
+            cursor.execute(sql, *args)
+            db.commit()
+        self.fechar(db)
+
     def tabela(self):
         sql = """
             CREATE TABLE IF NOT EXISTS produto(
@@ -19,35 +49,28 @@ class Banco:
                 quantidade INTEGER NOT NULL
             );
         """
-        self.db = self.conectar()
-        self.cursor = self.db.cursor()
-        self.cursor.execute(sql)
-        self.fechar(self.db)
+        self.executar(sql, None)
 
     def inserir_produto(self, *args):
         sql = "INSERT INTO produto (produto, tipo, preco_unitario, quantidade) VALUES (?, ?, ?, ?);"
-        self.db = self.conectar()
-        self.cursor = self.db.cursor()
-        self.cursor.execute(sql, *args)
-        self.db.commit()
-        self.fechar(self.db)
+        self.executar(sql, 'insert', *args)
 
     def ler_produtos(self):
         sql = "SELECT * FROM produto;"
-        self.db = self.conectar()
-        self.cursor = self.db.cursor()
-        self.produtos = self.cursor.execute(sql)
-        self.lista_produtos = []
+        return self.executar(sql, 'select')
 
-        for item in self.produtos.fetchall():
-            self.lista_produtos.append(item)
+    def apagar_produto(self, *args):
+        sql = "DELETE FROM produto WHERE id = ?;"
+        self.executar(sql, 'delete', *args)
 
-        self.fechar(self.db)
+    def ler_quantidade(self):
+        sql = "SELECT * FROM produto;"
+        return self.executar(sql, 'select-quantidade')
 
-        return self.lista_produtos
+    def editar_produto(self, *args):
+        sql = "UPDATE produto SET quantidade = ? WHERE id = ?"
+        self.executar(sql, 'update', *args)
 
-    def apagar_produto(self):
-        sql = "DELETE FROM produto WHERE ;"
 
     def __init__(self):
         self.tabela()
