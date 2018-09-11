@@ -24,5 +24,12 @@ class Banco:
         self.cursor.execute(sql)
         self.fechar(self.db)
 
+    def inserir_produto(self, *args):
+        sql = "INSERT INTO produto (produto, tipo, preco_unitario, quantidade) VALUES (?, ?, ?, ?);"
+        self.db = self.conectar()
+        self.cursor = self.db.cursor()
+        self.cursor.execute(sql, *args)
+        self.fechar(self.db)
+
     def __init__(self):
         self.tabela()
