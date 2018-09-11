@@ -42,7 +42,12 @@ class Banco:
         for item in self.produtos.fetchall():
             self.lista_produtos.append(item)
 
+        self.fechar(self.db)
+
         return self.lista_produtos
+
+    def apagar_produto(self):
+        sql = "DELETE FROM produto WHERE ;"
 
     def __init__(self):
         self.tabela()
