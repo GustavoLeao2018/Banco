@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>736</width>
+    <height>250</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QFormLayout" name="formLayout">
+    <item row="3" column="1">
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="4" column="0">
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>Quantidade:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_3">
+        <property name="text">
+         <string>Tipo:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>Preço unitário:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_4">
+        <property name="text">
+         <string>Produto:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QComboBox" name="comboBox_2">
+        <item>
+         <property name="text">
+          <string>Arroz</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Detergente</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Desinfetante</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Água sanitária</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Sabão em Pó</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Sabão em pedra</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Amaciante</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Álcool</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Lustra móveis</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Inseticida</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Saco de Lixo</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Papel Toalha</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Feijão</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Guardanapo</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Papel Alumínio</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Filme plástico</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Açúcar</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Esponja de aço</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Café</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Rodo / vassoura</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Fósforo</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Vela</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Lâmpada</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Palito de dente</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Filtro para café</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Shampoo</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Condicionador</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Sabonete</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Desodorante</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Papel higiênico</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Creme dental</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Fio dental</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Escova de dentes</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Cotonete</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Algodão</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Chá</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Absorvente</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Bife</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Carne Moída</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Carne de frango</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Presunto</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Mussarela</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Mortadela</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Salsicha</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Linguiça</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Achocolatado</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Leite</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Pão</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Farinha de Trigo</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Farinha de Rosca</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Amido de Milho</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Fermento</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Macarrão</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Molho de Tomate</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Leite condensado</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Creme de leite</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Gelatina</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Ketchup</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Maionese</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Óleo</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Azeite</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Vinagre</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Tempero Pronto</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Alface</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Repolho</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Vagem</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Tomate</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Pepino</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Cebola</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Batata</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Cenoura</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Pimentão</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Chuchu</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Limão</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Banana</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Mamão</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Melão</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Laranja</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Abacaxi</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Morango</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Maçã</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Maracujá</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Melancia</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QComboBox" name="comboBox">
+        <item>
+         <property name="text">
+          <string>Alimento</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Frutas e Verduras</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Bebidas</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Utilidades / Limpeza</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Higiene</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Açouge / Carnes</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QSpinBox" name="spinBox"/>
+      </item>
+      <item row="3" column="1">
+       <widget class="QDoubleSpinBox" name="doubleSpinBox"/>
+      </item>
+      <item row="6" column="1">
+       <widget class="QPushButton" name="pushButton">
+        <property name="text">
+         <string>Salvar</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>736</width>
+     <height>23</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
