@@ -1,5 +1,6 @@
 from trabalho.Banco import *
 from random import choice, randint
+from trabalho.Guis import *
 
 
 produto_lista = [
@@ -45,3 +46,7 @@ if __name__ == '__main__':
     ler(db)
     deletar(db)
     alterar(db)
+
+    g = Guis()
+    g.inserir()
+
